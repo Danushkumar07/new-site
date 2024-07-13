@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK Clothing Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>DK Clothing Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('products') }}">Products</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to DK Clothing Store</h2>
+                <p>Discover the latest trends in fashion.</p>
+                <a href="{{ url_for('products') }}" class="btn">Explore Now</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Description of Product 1.</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/product2.jpg') }}" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Description of Product 2.</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Add more product entries as needed -->
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Learn more about DK Clothing Store.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DK Clothing Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for basic interactivity -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
